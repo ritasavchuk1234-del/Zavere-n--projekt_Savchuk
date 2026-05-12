@@ -1,0 +1,78 @@
+/* Všeobecné nastavenia */
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navigácia */
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Banner */
+.banner {
+    background: url('../img/Sakúry.jpeg') center/cover no-repeat;
+    height: 75vh;
+    position: relative;
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+.banner-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Sekcie na úvodnej stránke */
+.shadow {
+    box-shadow: 0 0 15px rgba(0,0,0,0.15) !important;
+}
+
+/* Blog */
+.blog-card {
+    background: #fff;
+}
+.blog-img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Obrázky v blogu */
+.blog-text {
+    max-height: 90px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+.blog-text.expanded {
+    max-height: 400px;
+}
+
+/* Galéria */
+.gallery-img {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* Lightbox animácia */
+#lightboxImage {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* aktívna animácia po kliknutí */
+#lightboxImage.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+}
