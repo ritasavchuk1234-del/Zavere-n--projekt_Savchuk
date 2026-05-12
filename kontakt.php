@@ -19,7 +19,7 @@
 <!--  Navigácia -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Japonsko</a>
+        <a class="navbar-brand" href="index.php">Japonsko</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
@@ -27,11 +27,11 @@
 
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
-                <li class="nav-item"><a class="nav-link" href="o_nas.html">O Japonsku</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="galeria.html">Galéria</a></li>
-                <li class="nav-item"><a class="nav-link active" href="kontakt.html">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php">Domov</a></li>
+                <li class="nav-item"><a class="nav-link" href="o_nas.php">O Japonsku</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.php">Galéria</a></li>
+                <li class="nav-item"><a class="nav-link active" href="kontakt.php">Kontakt</a></li>
             </ul>
         </div>
     </div>
