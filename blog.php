@@ -65,6 +65,10 @@ $articles = $articleModel->getAll();
             <?= htmlspecialchars($article['title']) ?>
         </h2>
 
+        <p class="text-muted">
+            <?= $article['created_at'] ?>
+        </p>
+
         <?php if ($article['image']): ?>
 
         <img src="img/<?= htmlspecialchars($article['image']) ?>"
