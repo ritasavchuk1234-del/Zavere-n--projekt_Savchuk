@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require 'classes/Database.php';
 require 'classes/Article.php';
 
@@ -67,20 +69,23 @@ $articles = $articleModel->getAll();
             <?= nl2br(htmlspecialchars($article['content'])) ?>
         </p>
 
-        <a href="admin/delete.php?id=<?= $article['id'] ?>"
+        <?php if (isset($_SESSION['user'])): ?>
+
+            <a href="admin/delete.php?id=<?= $article['id'] ?>"
             class="btn btn-danger mt-3"
             onclick="return confirm('Naozaj chcete zmazať článok?')">
                 
                 Zmazať
                 
-        </a>
+            </a>
         
-        <a href="admin/edit.php?id=<?= $article['id'] ?>"
+            <a href="admin/edit.php?id=<?= $article['id'] ?>"
             class="btn btn-warning mt-3 ms-2">
 
                 Upraviť
         
-        </a>
+            </a>
+        <?php endif; ?>
 
     </article>
 
