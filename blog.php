@@ -65,6 +65,14 @@ $articles = $articleModel->getAll();
             <?= htmlspecialchars($article['title']) ?>
         </h2>
 
+        <?php if ($article['image']): ?>
+
+        <img src="img/<?= htmlspecialchars($article['image']) ?>"
+             class="img-fluid rounded mb-3"
+             alt="Article image">
+
+        <?php endif; ?>
+
         <p class="blog-text">
             <?= nl2br(htmlspecialchars($article['content'])) ?>
         </p>
@@ -95,7 +103,7 @@ $articles = $articleModel->getAll();
 
 <!-- FOOTER -->
 <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p class="mb-0">&copy; 2025 Japonsko – študentský projekt | Marharyta Savchuk</p>
+    <p class="mb-0">&copy; 2026 Japonsko – študentský projekt | Marharyta Savchuk</p>
 </footer>
 
 <!-- Bootstrap JS -->

@@ -10,14 +10,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $title = $_POST['title'];
     $content = $_POST['content'];
+    $image = $_FILES['image']['name'];
+    $tmp_name = $_FILES['image']['tmp_name'];
+    move_uploaded_file($tmp_name, "../img/" . $image);
 
-    $sql = "INSERT INTO articles (title, content)
-            VALUES (:title, :content)";
+    $sql = "INSERT INTO articles (title, content, image)
+            VALUES (:title, :content, :image)";
 
     $stmt = $db->prepare($sql);
 
     $stmt->bindParam(':title', $title);
     $stmt->bindParam(':content', $content);
+    $stmt->bindParam(':image', $image);
 
     $stmt->execute();
 
@@ -42,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <h1 class="mb-4">Pridať nový článok</h1>
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
 
         <div class="mb-3">
 
@@ -70,6 +74,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </div>
 
+        <div class="mb-3">
+            <label class="form-label">
+                Obrázok
+            </label>
+
+            <input type="file"
+                   name="image"
+                   class="form-control">
+
+        </div>
+        
         <button type="submit"
                 class="btn btn-dark">
 
