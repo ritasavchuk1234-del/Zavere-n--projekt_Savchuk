@@ -13,11 +13,24 @@
 
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="/Zaverečný%20projekt_Savchuk/index.php">Domov</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Zaverečný%20projekt_Savchuk/index.php">Domov</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Zaverečný%20projekt_Savchuk/o_nas.php">O Japonsku</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Zaverečný%20projekt_Savchuk/blog.php">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="/Zaverečný%20projekt_Savchuk/galeria.php">Galéria</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/Zaverečný%20projekt_Savchuk/kontakt.php">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Zaverečný%20projekt_Savchuk/kontakt.php">Kontakt</a></li>
+
+                <?php if (!isset($_SESSION['user'])): ?>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="/Zaverečný%20projekt_Savchuk/login.php">
+
+                            Prihlásenie
+
+                        </a>
+                    </li>
+
+                <?php endif; ?>
+
 
                 <?php if (isset($_SESSION['user'])): ?>
 

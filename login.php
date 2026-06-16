@@ -51,7 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<div class="container mt-5">
+<?php require 'includes/nav.php'; ?>
+
+<div class="container mt-5 pt-5">
 
     <h1 class="mb-4">Prihlásenie</h1>
 
