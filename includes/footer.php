@@ -1,6 +1,6 @@
 <!-- FOOTER -->
 <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p class="mb-0">&copy; 2025 Japonsko – študentský projekt | Marharyta Savchuk</p>
+    <p class="mb-0">&copy; 2026 Japonsko – študentský projekt | Marharyta Savchuk</p>
 </footer>
 
 <!-- Bootstrap JS -->
